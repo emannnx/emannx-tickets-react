@@ -1,0 +1,127 @@
+.ticket-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.ticket-header h3 {
+  color: var(--neutral-dark);
+  margin: 0;
+  flex: 1;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-open {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-in-progress {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-closed {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.ticket-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.ticket-priority {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.ticket-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-delete {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .ticket-card {
+    padding: 1rem;
+  }
+
+  .ticket-header {
+    flex-direction: column;
+  }
+
+  .ticket-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .ticket-actions {
+    width: 100%;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    flex: 1;
+  }
+}
